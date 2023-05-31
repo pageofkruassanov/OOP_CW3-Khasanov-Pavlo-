@@ -18,6 +18,8 @@ public:
 
     String(const char* s);
 
+    String(const String& obj);
+
     ~String();
 
     void inputString();

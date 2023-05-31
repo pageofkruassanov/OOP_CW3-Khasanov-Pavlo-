@@ -17,6 +17,16 @@ String::String(const char* s)
 	count++;
 }
 
+String::String(const String& obj)
+{
+	this->length = obj.length;
+
+	this->str = new char[length + 1];
+	for (int i = 0; i < length; i++) {
+		str[i] = obj.str[i];
+	}
+}
+
 String::~String()
 {
 	delete[] str;

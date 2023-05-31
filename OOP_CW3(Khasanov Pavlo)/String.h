@@ -28,5 +28,17 @@ public:
 
     void strcopy(String& obj);
 
+    bool MyStrStr(const char* str);
+
+    int MyChr(char c);
+    // MyStrLen возвращает текущее кол-во символов в строке до '\0', не фактически допустимое. Размер строки можно узнать с помощью геттера getLength
+    int MyStrLen();
+
+    void MyStrCat(String& b);
+
+    void MyDelChr(char c);
+
+    int MyStrCmp(String& b);
+
     static int getCount();
 };

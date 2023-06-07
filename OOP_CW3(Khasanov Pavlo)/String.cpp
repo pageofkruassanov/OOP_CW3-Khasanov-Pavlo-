@@ -170,3 +170,27 @@ int String::getCount()
 {
 	return count;
 }
+
+char String::operator[](int index) const
+{
+	if (index >= 0 && index < length && strlen(str) > index) {
+		char tempChar = str[index];
+		return tempChar;
+	}
+	else
+		return '0';
+}
+
+int String::operator()(char symb) const
+{
+	for (int i = 0; i < length; i++) {
+		if (symb == str[i])
+			return i;
+	}
+	return -1;
+}
+
+String::operator int()
+{
+	return length;
+}

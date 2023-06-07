@@ -20,8 +20,6 @@ public:
 
     String(const String& obj);
 
-    ~String();
-
     void inputString();
 
     void displayString();
@@ -43,4 +41,10 @@ public:
     int MyStrCmp(String& b);
 
     static int getCount();
+
+    char operator[](int index) const;
+    int operator()(char symb) const;
+    operator int();
+
+    ~String();
 };
